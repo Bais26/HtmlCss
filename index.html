@@ -4,19 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    body {
-        background-color:white;
-        font-family:sans-serif;
-        margin: 0;
-        padding: 0;
-
-    }
-    a:hover{
-        opacity: 90%;
-        background-color: #4CAF50;
-    }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
     <!-- html element
     html attribute
@@ -26,6 +14,11 @@
     html formatting
     html links
     html image -->
+
+    <!-- Lanjutkan kembali tugas proyek yang telah dikerjakan minggu lalu dengan menambahkan
+
+1. Pembuatan Tabel yang memuat atribut tabel, styling tabel, ukuran tabel, padding spacing, rowpan dan colspan
+2. Pembuatan Form yang memuat elemen form, elemen input, elemen form, field teks, elemen label, nilai opsi, tombol kirim, atribut tindakan , atribut metode, elemen area teks, tipe input -->
 <body>
     <!-- nav -->
     <section>
@@ -35,7 +28,7 @@
                     <a href="#" style="text-decoration: none; color: white;"><i>BaisBuah</i></a>
                 </div>
                 <ul style="list-style-type: none; margin: 0; padding: 0; display: flex;">
-                    <li style="margin-right: 20px;"><a href="#Tentang-kami" style="text-decoration: none; color: white; font-weight: bold; font-size: 16px;">Tentang Kami</a></li>
+                    <li style="margin-right: 20px;"><a href="#Tentang-kami" style="text-decoration: none; color: white; font-weight: bold; font-size: 16px;">Pesan Buah</a></li>
                     <li style="margin-right: 20px;"><a href="#Manfaat" style="text-decoration: none; color: white; font-weight: bold; font-size: 16px;">Manfaat</a></li>
                     <li><a href="#Galery" style="text-decoration: none; color: white; font-weight: bold; font-size: 16px;">Galeri</a></li>
                 </ul>
@@ -53,6 +46,61 @@
             </div>
     </section>  
     <a href="https://github.com/Bais26/HtmlCss">My-Github</a>
+
+    <!-- Form -->
+    <form action="proses.php" method="post">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama" required>
+
+        <label for="usia">Alamat</label>
+        <input type="text" id="usia" name="Alamat" placeholder="Masukkan Alamat" required>
+
+        <label for="jenis-buah">Jenis Buah:</label>
+        <select id="jenis-buah" name="jenis-buah">
+            <option value="apel">Apel</option>
+            <option value="pisang">Pisang</option>
+            <option value="jeruk">Jeruk</option>
+            <option value="anggur">Anggur</option>
+            <option value="strowbery">Strowbery</option>
+            <option value="lemon">Lemon</option>
+        </select>
+
+        <label for="jumlah-pesanan">Jumlah Pesanan (kg)</label>
+        <input type="number" id="jumlah-pesanan" name="jumlah-pesanan" placeholder="Masukkan Jumlah Pesanan (kg)" min="1">
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" placeholder="Masukkan Pesan"></textarea>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+     <!-- Tabel -->
+     <table cellspacing="5" cellpadding="10">
+        <tr style="">
+            <th colspan="3">Manfaat Buah</th>
+        </tr>
+        <tr>
+            <th>Foto</th>
+            <th>Data Buah</th>
+            <th>Keterangan</th>
+        
+        </tr>
+        <tr>
+            <td rowspan="4"> <img src="./img/Apel.jpg" alt="Apel" width="100px" ></td>
+            <td>Nama</td>
+            <td>Apel</td>
+        </tr>
+        <tr>
+            <td>Tanggal Panen</td>
+            <td>10 Okt 2023</td>
+        </tr>   
+        <tr>
+            <td>Harga</td>
+            <td>Rp.15.000/kg</td>
+        </tr>
+        <tr>
+            <td>Manfaat</td>
+            <td>Melancarkan Pencernaan</td>
+        </tr>
 
 </body>
 </html>
